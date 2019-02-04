@@ -1,0 +1,53 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Program List
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>
+                    <button type="submit" [routerLink]="['/', { outlets: { popup: 'program-new'} }]" replaceUrl="true"
+                    queryParamsHandling="merge" class="btn btn-success btn-sm">
+                        <span class="fa fa-plus"></span>
+                        <span class="hidden-md-down" > Add </span>
+                    </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of programs">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>
+                  <button type="submit" [routerLink]="['/', { outlets: { popup: 'program/'+ p.id + '/edit'} }]" replaceUrl="true"
+                    queryParamsHandling="merge" class="btn btn-primary btn-sm">
+                        <span class="fa fa-pencil"></span>
+                        <span class="hidden-md-down" > Update </span>
+                  </button>
+                  <button type="button" class="btn btn-danger btn-sm"> Delete </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
