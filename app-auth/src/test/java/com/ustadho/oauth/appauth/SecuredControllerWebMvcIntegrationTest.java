@@ -24,7 +24,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.mitrais.rms.SecureController;
+import com.mitrais.rms.auth.SecureController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class SecuredControllerWebMvcIntegrationTest {
@@ -47,7 +47,7 @@ public class SecuredControllerWebMvcIntegrationTest {
          .andExpect(content().string("Hallo Fiend"));
 	}
 	
-	@WithMockUser(username = "admin", password = "password")
+	//@WithMockUser(username = "admin" )
 	@Test
 	public void givenAuthServiceOn_shouldSuccessWith200() throws Exception{
 		mockMvc.perform(get("/current-user").contentType(MediaType.APPLICATION_JSON))
