@@ -20,6 +20,5 @@ spring:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
       ddl-auto: validate
   flyway:
-    locations: classpath:db/migration
+    locations: classpath:db/mysql/migration
 check-user-scopes: true
-

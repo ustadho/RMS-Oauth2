@@ -1,4 +1,4 @@
-package com.ustadho.oauth.appauth;
+package com.mitrais.rms.resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

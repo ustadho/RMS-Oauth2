@@ -53,12 +53,13 @@ public class UserController {
     }
 
     @GetMapping("all")
+    @PreAuthorize("hasAnyAuthority('can_read_user')")
     public Iterable<User> findAll2() throws URISyntaxException{
         return repository.findAll();
 
     }
 
-
+    @PreAuthorize("hasAnyAuthority('can_update_user')")
     @PostMapping
     public ResponseEntity<User> create(@RequestBody User user) throws URISyntaxException {
         log.debug("REST request to save User {}", user);

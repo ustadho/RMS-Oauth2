@@ -21,5 +21,6 @@ spring:
       ddl-auto: validate
   flyway:
     locations: classpath:db/migration
+  main:
+    allow-bean-definition-overriding: true
 check-user-scopes: true
-

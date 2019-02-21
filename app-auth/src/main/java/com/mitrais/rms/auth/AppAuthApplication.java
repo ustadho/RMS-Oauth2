@@ -16,8 +16,5 @@ public class AppAuthApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AppAuthApplication.class, args);
 	}
-        
-        
-        
 }
 

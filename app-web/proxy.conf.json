@@ -1,5 +1,9 @@
 {
-  "/api": {
+  "/oauth/**": {
+    "target": "http://localhost:8000",
+    "secure": false
+  },
+  "/api/**": {
     "target": "http://localhost:9000",
     "secure": false
   }

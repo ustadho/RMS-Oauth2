@@ -28,9 +28,9 @@ public class SecureController {
 		return new ModelMap().addAttribute("sekarang", new Date());
 	}
 	@ResponseBody
-	@GetMapping("hallo-friend")
+	@GetMapping("hello")
 	public String haloFriend() {
-		return "Hallo Fiend";
+		return "Hello";
 	}
 
 	@PreAuthorize("hasAuthority('USER_VIEW')")
